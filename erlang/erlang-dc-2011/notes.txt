@@ -39,4 +39,8 @@ ErlangDC - Bootcamp (830am - noon)
   calling process to terminate with a 'badarg' error 
 > The atom 'infinity' can be used with TimeOut to denote no expiration
   for message reception
+> error handling done in Erlang with a few concepts, one of which is Links
+> Links allow exit signals so if a process terminates, processes linked to
+  the terminating process will receieve a signal
+> Unlink removes a link to a Pid
 > 
