@@ -36,3 +36,23 @@ from Java to Erlang
   same way you built it up
 > if/switch/Polymorphism to Pattern Matching
 > pattern matching uses destructuring to dispatch to different behaviors
+> from Classes/Objects/Threads to Processes (but really Processes are
+  unlike anything in Java)
+> Processes have a loose notion of a type, and are the mechanism for
+  concurrency
+> Erlang processes are NOT OS processes or Java threads!
+> Processes are much cheaper to set up and tear down
+> Processes live only in the Erlang virtual machine
+> Processes can be equated to the Actor model
+> from methods to Message Passing
+> Erlang processes talk through Message Passing
+> messages are copied like a full deep clone, which can potentially be
+  expensive (but there are upsides to this)
+> each process has its own heap
+> Containers/JARs/WARs/EARs/J2EE to OTP
+> OTP is like the plumbling for applications. "It's Erlang to help you
+  build Erlang."
+> Behaviors are like Containers
+> Callbacks are business logic
+> from Exceptions to "Let it crash"/Process Trees/Supervisors
+> 
