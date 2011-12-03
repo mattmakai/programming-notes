@@ -55,4 +55,8 @@ from Java to Erlang
 > Behaviors are like Containers
 > Callbacks are business logic
 > from Exceptions to "Let it crash"/Process Trees/Supervisors
-> 
+> Supervisors supervising Supervisors (to prevent crashes from causing the
+  whole application to fail)
+> Erlang has Rebar for builds (previously developers just used make)
+> Rebar is trying to create a common language around Erlang builds and
+  is written in Erlang
