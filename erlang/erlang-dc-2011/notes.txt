@@ -1,0 +1,19 @@
+ErlangDC - Bootcamp (830am - noon)
+----------------------------------
+
+> strings don't exist in Erlang except as lists of ASCII characters
+> atoms start with a lowercase
+> variables start with an uppercase or _
+> "full stop" is . (terminator)
+> arity: number of arguments
+> module must correspond to filename
+> case statement for conditional evaluation
+> clauses in case statements are separated by ;
+> guards -> introduced by the reserved word 'when'
+> you cannot created your own guards - used to be for historical reasons 
+  but it is now because the designers do not want user-developed guards 
+  to have side effects
+> many built-in functions in Erlang are written in C for fast execution
+> built-in functions are in the erlang module
+> preference in Erlang culture is to have self-describing code
+> 
