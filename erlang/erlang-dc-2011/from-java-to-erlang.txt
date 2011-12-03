@@ -1,0 +1,38 @@
+from Java to Erlang
+  by Ryan Zezeski
+-------------------
+
+> you say "class" I say "data"
+> Maven = Rebar
+> J2EE = OTP
+> mapping Java ideas to Erlang ideas
+> Erlang has no notion of a class, and while a module looks like a class,
+  it is not actually a class
+> "it is better to have 100 functions operate on one data structure than
+  10 functions on 10 data structures" ~ Alan Perlis
+> many "flavors" of methods in Java, i.e. public/private, static
+> Erlang has functions which live in modules, which group similar functions
+  together
+> Erlang has no return statement (exceptions can sort of mimic this behavior)
+> the last expression in an Erlang function is the return value
+> all functions are first class in Erlang (functions are like data)
+> organizing modules is like organizing classes/packages
+> Erlang has a flat namespace (in Java this would be like everything living
+  in the same namespace) - Erlang gets around this by prefixing functions with
+  module names
+> Erlang functions can be public/private but they are only made public
+  by exporting them
+> from packages/JARs to Applications
+> in Java, JARs are how you ship code, with many JARs put together to make
+  an application
+> an Erlang Application is like a JAR, most commonly called "OTP Application"
+> from Java variables to Erlang symbols
+> Erlang symbols are immutable
+> Java loves mutability, which causes many side effects
+> "Change" in Erlang is really a modified copy
+> Higher Order Functions replace loops (declarative iteration over items)
+> Erlang's higher order functions are more declarative, it's "what" not "how"
+> Java 'getters' versus Erlang 'destructure' -> pull apart data in the
+  same way you built it up
+> if/switch/Polymorphism to Pattern Matching
+> pattern matching uses destructuring to dispatch to different behaviors
