@@ -1,4 +1,5 @@
-ErlangDC - Bootcamp (830am - noon)
+ErlangDC - Bootcamp (830am - noon) 
+  talk by Francesco Cesarini
 ----------------------------------
 
 > strings don't exist in Erlang except as lists of ASCII characters
