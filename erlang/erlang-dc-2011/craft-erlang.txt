@@ -1,0 +1,15 @@
+Crafty Erlang
+  by Colin MacDonald
+--------------------
+
+> talk focuses on programming idioms of Erlang and patterns to apply
+> "synergistic weirdness" - the "weirdness" of Erlang comes together
+  and makes the language work, but that means you have to know the
+  whole language well to create beautiful programs
+> digression: why do you do recursion backwards? because the lists are
+  singly linked lists, the key is that the lists are immutable, which
+  allows efficient use of the list data structure
+> * Review of a bowling game example program *
+> Escript -> allows you to run Erlang as a script as if it were
+  a scripting language like Python or Ruby
+>  
