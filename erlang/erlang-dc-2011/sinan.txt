@@ -1,0 +1,11 @@
+Sinan - Building Enterprise Applications
+  by Eric Merritt
+----------------------------------------
+
+> Nice Prezi presentation - well done with the large image
+> Sinan internally developed at Amazon.com as "Polar"
+> 2006 - rereleased under the name Sinan
+> Sinan in maintanance mode from 2008-10 due to book writting, but
+  now very actively developed
+> Sinan ONLY builds Erlang/OTP apps
+> 
