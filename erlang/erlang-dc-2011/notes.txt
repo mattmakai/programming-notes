@@ -16,4 +16,23 @@ ErlangDC - Bootcamp (830am - noon)
 > many built-in functions in Erlang are written in C for fast execution
 > built-in functions are in the erlang module
 > preference in Erlang culture is to have self-describing code
+> using tail recursive functions will execute the recursive code in the
+  same memory space so you will not get stack overflows
+> tail recursion only happens when the last thing you do within a function
+  is recursively call the function
+> Erlang does not have functions for lazy evaluation of large lists in
+  the standard library (you can write your own)
+> built-in function spawn never fails, it ALWAYS returns a new process,
+  the process that is kicked off may terminate if there is an error though
+> sending a message never fails, but we have no guarantee the receiving
+  process will actually get the message (you must request an acknowledgement)
+> sending a message in Erlang is just like calling a function
+> flush retrieves messages
+> messages used to communicate between different processes by their Pids
+> selective vs non-selective message reception: in selective, we wait on the
+  message reception based on sending processes, in non-selective, we don't
+  care and do not suspend the receiving process
+> you can register Pids with an Alias (an atom) that allows you to
+  send messages to that atom
+> registered() return an array of registered Alias atoms
 > 
