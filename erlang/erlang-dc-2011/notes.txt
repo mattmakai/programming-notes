@@ -45,4 +45,3 @@ ErlangDC - Bootcamp (830am - noon)
 > Unlink removes a link to a Pid
 > Exit signals can be trapped, in which case they will not propagte further
   but will instead send a signal with a signal {'EXIT', Pid, Reason}
-
