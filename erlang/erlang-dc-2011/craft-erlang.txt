@@ -12,4 +12,4 @@ Crafty Erlang
 > * Review of a bowling game example program *
 > Escript -> allows you to run Erlang as a script as if it were
   a scripting language like Python or Ruby
->  
+> Spooky -> web framework for Erlang, "minimum viable Erlang web framework"
