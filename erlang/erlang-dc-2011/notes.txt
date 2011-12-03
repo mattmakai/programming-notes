@@ -35,4 +35,8 @@ ErlangDC - Bootcamp (830am - noon)
 > you can register Pids with an Alias (an atom) that allows you to
   send messages to that atom
 > registered() return an array of registered Alias atoms
+> sending messages to non-existing registered processed causes the 
+  calling process to terminate with a 'badarg' error 
+> The atom 'infinity' can be used with TimeOut to denote no expiration
+  for message reception
 > 
