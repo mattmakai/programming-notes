@@ -13,3 +13,4 @@ Crafty Erlang
 > Escript -> allows you to run Erlang as a script as if it were
   a scripting language like Python or Ruby
 > Spooky -> web framework for Erlang, "minimum viable Erlang web framework"
+> talk is on bluegraybox.github.com/Craft-Erlang (S9 markup)
