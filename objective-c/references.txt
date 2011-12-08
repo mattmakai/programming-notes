@@ -1,0 +1,19 @@
+http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/Learning_Objective-C_A_Primer/_index.html
+--------------------------------
+> .h for header files, .m for source files, .mm for source files that can
+  contain C++ code
+> use #import to include header files in source code
+> @interface used to begin interface declaration, @end used to end it
+> parent class name delineated from class name by a :
+> both strong and weak typing for variables containing objects allowed
+> object references are pointers in Objective-C, declared by *
+> strongly-typed object declarations have * in front of variable names
+> id type implies a pointer
+> two types of methods in Objective-C classes: instance and class
+> instance methods are scoped to a particular instance of a class
+> class method do not require the creation of an instance
+
+
+http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html
+
+
