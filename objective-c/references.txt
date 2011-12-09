@@ -12,6 +12,15 @@ http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/Learning
 > two types of methods in Objective-C classes: instance and class
 > instance methods are scoped to a particular instance of a class
 > class method do not require the creation of an instance
+> a - sign at the start of a method signature indicates an instance method
+> to call a method, you must message an object
+> a message is comprised of a method signature with parameters, for example:
+  [myArray insertObject:anObject atIndex:0];
+> messages can be nested, for example:
+  [[myAppObject theArray] insertObject:[myAppObject objectToInsert] atIndex:0];
+> accessor methods are instance methods used to get and set values of a 
+  property of an object
+> Objective-C uses a dot syntax for invoking accessor methods
 
 
 http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html
