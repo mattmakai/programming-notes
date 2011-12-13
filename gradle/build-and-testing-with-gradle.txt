@@ -1,0 +1,41 @@
+Building and Testing with Gradle
+  by Tim Berglund & Matthew McCullough
+--------------------------------------
+
+> Gradle sits between Ant & Maven in providing conventions to follow but
+  also allowing extensions or redefinition of conventions when necessary
+> Gradle provides options for how to handle build dependencies, ranging
+  from interfacing with Maven/Ivy repositories to managing dependencies
+  by hand
+> Gradle provides Groovy DSL for expressing build files
+> Groovy-based build files allow general-purpose programming within the
+  build files
+> Gradle plugins are used to describe how to do the build through new task
+  definitions
+> "Hello world" in Gradle (build.gradle file) contents:
+    task helloWorld << {
+      println 'hello, world!'
+    }
+> execute with $ gradle -q helloWorld
+> apply plugin: 'java' to build Java files (when following Maven project
+  structure conventions)
+> fundamental unit of a Gradle build activity is the task
+> tasks are named collections of build instructions executed while building
+> Gradle overloads the << operator to append a code block to the list of
+  actions that task performs
+> code within {} in Groovy is a closure
+> a closure without the << operator is a configuration block
+> configuration code runs before the execution phase
+> there are 3 lifecycle phases in Gradle: initialization, configuration, and
+  execution
+> in the execution phase, tasks are executed in the order required by
+  dependency relationships
+> Gradle creates an internal object model of the build before executing it
+> every new task in a Gradle build is defined as a DefaultTask
+> DefaultTask has methods: dependsOn(task), doFirst(closure),
+  doLast(closure), and onlyIf(closure)
+> 
+
+
+  
+
