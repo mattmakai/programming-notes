@@ -1,6 +1,7 @@
 Building and Testing with Gradle
   by Tim Berglund & Matthew McCullough
---------------------------------------
+(http://shop.oreilly.com/product/0636920019909.do)
+--------------------------------------------------
 
 > Gradle sits between Ant & Maven in providing conventions to follow but
   also allowing extensions or redefinition of conventions when necessary
@@ -32,10 +33,62 @@ Building and Testing with Gradle
   dependency relationships
 > Gradle creates an internal object model of the build before executing it
 > every new task in a Gradle build is defined as a DefaultTask
-> DefaultTask has methods: dependsOn(task), doFirst(closure),
+> DefaultTask has four methods: dependsOn(task), doFirst(closure),
   doLast(closure), and onlyIf(closure)
+> dependsOn(task) - adds a task dependency, always runs before this task
+> can also declare more than one dependency at once, for example:
+  task twoDependents {
+    dependsOn << firstDependentTask
+    dependsOn << secondsDependentTask
+  }
+> doFirst(closure) - adds executable code in a task's action before other
+  executable code, subsequent calls append before the previous calls
+> multiple calls to doFirst can be written in a single configuration block
+> doLast(closure) - same as doFirst, except it appends as the last action
+  in a block
+> remember the << operator is another way of expressing a doLast invocation
+> onlyIf(closure) - determine whether a task should be run, for example:
+    runThisBlock.onlyIf {
+      System.properties['production'] == 'true'
+    }
+> in Groovy the last statement of a closure is the return value even if
+  no return statement is present
+> DefaultTask also has properties: didWork, enabled, path, logger, logging,
+  description, temporaryDir
+> didWork - boolean property set to True/False based on whether the task
+  completed successfully, not all tasks set this upon completion although
+  built-in tasks like Compile, Copy, and Delete do set it
+> enabled - boolean property for whether a task should run or not. Setting
+  enabled to false will prevent the task from executing, although dependent
+  tasks will still run
+> path - string property with the fully qualified path of a task. By default,
+  set to the task's name with a colon prepended, like ':taskName', when a
+  task is in a top-level build file
+> for tasks not in a top-level build file (nested builds or dependent 
+  subprojects), path is ':subProject:echoMyPath'
+> logger - internal Gradle logger object (org.slf4j.Logger), with the
+  following log levels: DEBUG, INFO, LIFECYCLE, WARN, QUIET, ERROR
+> logging - property that gives access to current log level (can be read and
+  written to by the build)
+> description - property that adds metadata to a task, meant as human
+  readable way of understanding a task
+> temporaryDir - returns a File object to a temporary directory for this
+  build file
+> Gradle tasks can also have dynamic properties
+> There are many task types besides the DefaultTask type
+> task types are specified with type: [Type], for example:
+    task copyFiles(type: Copy) {
+      from 'from_location'
+      into 'to_location'
+      include '**/*.json', '**/*.py'
+    }
+> Task types enumerated in this book: Copy, Jar, JavaExec
+> Copy task type - copies files from one location to another (example see 
+  above), methods: from, into, include
+> Jar task type - creates a Jar file, very customizable task type, 
+  destinationDir property in this task type expects a java.io.File argument
+> JavaExec task type - runs a Java class with a main() method
+> Custom task types can be created in several ways
+> custom task types can be specified in the build file
 > 
-
-
-  
 
