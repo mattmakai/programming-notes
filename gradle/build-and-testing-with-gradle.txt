@@ -209,3 +209,26 @@ Ch. 6 - Multiproject Builds
 > the settings.gradle file tells Gradle what subdirectories of the root
   project contain projects 
 > each subproject can contain its own settings.gradle file
+> a simple way to get set up with multiproject builds is to have a
+	settings.gradle at the project root and a build.gradle in each
+	subproject and at the project root
+> in the settings.gradle file is an include statement for the subprojects,
+	when the subprojects are in directories equal to their name, for example:
+		include 'subproject1', 'subproject2'
+> when subprojects have individual build files the example would look
+  like this:
+    dependencies {
+      compile project(':subproject1')
+      compile project(':subproject2')
+    }
+
+> a multiproject build can also be expressed in a single master build
+  file
+> the third way of structuring a multiproject build is with a hybrid 
+  approach that uses several project-specific build files, where some 
+  configuration is placed in the master and some in the subproject
+  build files
+> multiproject builds are still considered a single graph of projects
+  in the directed acyclic graph
+
+  is 
