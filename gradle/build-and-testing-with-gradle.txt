@@ -231,4 +231,3 @@ Ch. 6 - Multiproject Builds
 > multiproject builds are still considered a single graph of projects
   in the directed acyclic graph
 
-  is 
