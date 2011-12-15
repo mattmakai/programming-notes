@@ -3,6 +3,8 @@ Building and Testing with Gradle
 (http://shop.oreilly.com/product/0636920019909.do)
 --------------------------------------------------
 
+Ch. 1 - Hello, Gradle!
+----------------------
 > Gradle sits between Ant & Maven in providing conventions to follow but
   also allowing extensions or redefinition of conventions when necessary
 > Gradle provides options for how to handle build dependencies, ranging
@@ -18,6 +20,9 @@ Building and Testing with Gradle
       println 'hello, world!'
     }
 > execute with $ gradle -q helloWorld
+
+Ch. 2 - Gradle Tasks
+--------------------
 > apply plugin: 'java' to build Java files (when following Maven project
   structure conventions)
 > fundamental unit of a Gradle build activity is the task
@@ -90,5 +95,117 @@ Building and Testing with Gradle
 > JavaExec task type - runs a Java class with a main() method
 > Custom task types can be created in several ways
 > custom task types can be specified in the build file
-> 
+> custom task types must extend either DefaultTask or one of its descendents
+> larger custom tasks should go into a separate script under the buildSrc
+  directory in the project root, within subdirectories based on the task
+  package & name -> for example: 
+    buildSrc/src/main/groovy/org/gradle/example/task/PythonTest.groovy
 
+Ch. 3 - Ant and Gradle
+----------------------
+> Gradle is a superset of Ant
+> Gradle brings everything from Ant into the Gradle namespace with 
+  ant.<taskname>
+> Gradle ships with a full copy of Ant
+> Gradle provides the flexibility of Ant with dependency management style
+  of Ivy
+> Gradle uses a Directed Acyclic Graph (DAG) like Ant for its execution plan
+> a task in Gradle is any step in the directed acyclic graph
+> a Gradle task most closely compares to an Ant target, not an Ant task
+> a Gradle variable compares to an Ant property
+> call Ant echo with: ant.echo(message: "hello from Ant")
+> use a custom Ant task with the taskdef method
+> Ant tasks can codepend on Gradle tasks as long as Gradle is used 
+  for executing the build
+> the ant object is a full Groovy AntBuilder, so Groovy can be used
+  for more any type of Ant build structure
+
+Ch. 4 - Maven and Gradle
+------------------------
+> Gradle aims to take the best of Maven and leave behind what did not work
+  well
+> Polyglot Maven is not equivalent to Gradle because it retains the legacy
+  parts of Maven and only removes the XML configuration
+> Gradle retains the concept of convention over configuration of Maven but
+  alters some conventions
+> Gradle does not demand the remote repositories of Maven and Ivy
+> Gradle removes the XML configuration language of Maven and instead uses
+  Groovy and a Groovy-based DSL
+> Gradle also removes the strict Maven lifecycle and Ant's absence of a 
+  lifecycle
+> from the command line enter 'gradle tasks' to see what tasks can be run
+> Maven -> Gradle mapping of terms: groupId = group, artifactId = name,
+  version = version
+> each of the above fields is known as a property in Gradle
+> from the command line, enter 'gradle properties' to see what properties
+  are available to Gradle and their defaults or current values
+> each plugin introduces new properties that can be listed with 
+  gradle properties
+> Gradle offers both an Ivy and Maven dependency and repository compatibility
+  layer
+> libraries are declared as external dependencies in a one-line listing inside
+  the dependencies closure
+> the dependencies closure can also have a field-by-field list with phrases
+  that represent scopes (configurations) for the external dependencies
+> the java plugin contains six available scopes (configurations) for 
+  dependencies: compile, default, testCompile, testRuntime, archives, runtime
+> new scopes can be introduced by plugins
+> Gradle provides a bridge DSL to use Ivy and Maven structured repositories
+> for dependencies stored in a custom folder, Gradle provides the add() method
+  and the FileSystemResolver() object
+> flat is used to add JARs from a flat subdirectory
+> JUnit unit tests can be incorporated into a build with the 'junit'
+  dependency. For example:
+    dependencies {
+      testCompile group: 'junit', name: 'junit', version: '4.8.+'
+    }
+> sourceSets.main allows for specifying additional source folders beyond the
+  conventional src/main/java folder
+> Gradle has support for default tasks and multiple default tasks
+> to publish a Maven pm.xml file for a project use Gradle's Maven plug-in
+> the gradle install process is compatible with mvn install because it uses
+  the Maven Ant tasks created by the Maven team
+> maven2gradle is a build script converter under active development that
+  takes a pom.xml file and exports it to a Gradle build file
+> the Gradle-M2Metadata-Plug-in is an attempt to directly import Maven
+  pom.xml files although the project is a work in progress and not yet
+  intended for production use
+
+Ch. 5 - Testing with Gradle
+---------------------------
+> Gradle can be used both for unit testing as well as full pipeline automation
+  with integration tests and advanced testing frameworks (Spock, Geb, etc)
+> JUnit test example:
+  apply plugin: 'java'
+
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    testCompile 'junit:junit:4.8.2'
+  }
+
+> the JUnit execution results from Gradle produce a nicely formatted test 
+  report with tests that were executed, succeeded, and failed
+> Gradle provides a maxParallelForks to govern how many JVMs are spawned
+  to run JUnit tests in parallel
+> the forkEvery setting causes a test-running JVM to close and be replaced
+  by a new JVM after a certain number of tests are run
+> example of the above two settings (used in addition to the JUnit test
+  example above):
+  test {
+    maxParallelForks = 10
+    forkEvery = 25
+  }
+
+> Gradle can also be used with the TestNG and Spock frameworks
+
+Ch. 6 - Multiproject Builds
+---------------------------
+> Gradle allows the definition of a top-level project and a build file for
+  each subproject, it also allows for the definition of the build entirely
+  from a top-level build file
+> the settings.gradle file tells Gradle what subdirectories of the root
+  project contain projects 
+> each subproject can contain its own settings.gradle file
