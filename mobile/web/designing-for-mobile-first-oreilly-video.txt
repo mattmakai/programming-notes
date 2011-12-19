@@ -1,0 +1,25 @@
+Designing for Mobile First video
+  by Luke Wroblewski
+--------------------------------
+
+Video 1: Why Care About Mobile?
+-------------------------------
+> major computing cycle with mobile, mobile consumer expected to grow to
+  10+ billion (more devices than people) - number of devices today
+  already at 6+ billion
+> Amazon: > $1 billion spent on mobile devices over the past year
+> PayPal: mobile transactions increased 6-fold in 2009: $25M to $141M
+> 70% of PayPal mobile revenue comes from iPhone app
+> massive growth in social apps with mobile
+> Google mobile searches grew 130% in Q3 2010
+> Q4 2010 - smartphones surpassed PCs/laptops for device shipments (globally)
+> everything in mobile is happening faster than expected
+> still in early shift in usage from home personal computers to mobile
+> ~40% of people in the US have a smartphone
+> new experiences created with mobile - people using their devices while
+  out doing activities and out in the field (for example, searching 
+  Zillow while out searching for real estate)
+
+Video 2: Why Care About Mobile Web Experiences
+----------------------------------------------
+> 
