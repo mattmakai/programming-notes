@@ -22,4 +22,38 @@ Video 1: Why Care About Mobile?
 
 Video 2: Why Care About Mobile Web Experiences
 ----------------------------------------------
+> don't most people just use native mobile apps on smartphones? no, mobile web growing
+  expontentially as well
+> twitter.com - 78% of users use, m.twitter.com - 14% of users use, drops to 8% on iPhone
+> mobile web usage is growing allowside mobile traffic use
+> mobile phones will overtake PCs as most common web access devices by 2013
+> 600% growth to mobile websites (2010)
+> top 50 websites only 40% of all mobile visits (lots of different sites in remaining 60%)
+> what about native apps? mobile web becoming baseline and app is above that
+> native apps offer deeper hardware access, multi-tasking, app & in-app sales, home screen
+  placement on phone
+> mobile web advantages: broad access, instant updates, real-time testing, HTML + CSS
+> 10 current mobile OS platforms, many with small share but potential for growth
+> AT&T mobile data traffic increased 50x in 3 years (beg. 2007- end 2009) - 4,932%
+> new uses for mobile phones as people transition from personal computers
+
+Video 3: Mobile Capabilities
+----------------------------
+> accelerometer - portrait versus landscape mode, create better experience by taking
+  advantage of different screen dimensions
+> location systems - GPS/wifi/cell towers, allow finer grainularity for an application
+  to take advantage of
+> direction detection in location systems, deliver relevant information based on location
+  and direction you are traveling
+> augmented reality based on combination of different capabilities (yelp & London Tube
+  examples)
+> mobile web - no digital compass or video camera access (yet)
+> Android 3.0 + 4.0 - more access to device features from the browser
+> rethinking interaction with new device features, such as tilting to scroll down/up in
+  an article
+> new ways of presenting & interacting with information
+
+Video 4: Mobile Constraints
+---------------------------
 > 
+
