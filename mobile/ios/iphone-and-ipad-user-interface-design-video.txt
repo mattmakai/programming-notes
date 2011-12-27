@@ -1,0 +1,82 @@
+iPhone and iPad User Interface Design
+Found at: https://developer.apple.com/videos/ios/
+-------------------------------------------------
+> the goal for an app should be to make it: Useful, Intuitive, and Beautiful
+> attributes of improving user interface design: focus, touch, animation,
+  sound, language, typography, and graphics
+
+Focus
+-----
+> focusing your app: provide a useful and elegant solution with feature
+  set targeted to the problem you're solving
+> an app should be highly focused on just the task(s) the user wants to do
+> application definition statement: 1. what does the app do? and 2. who
+  will use it? - both answers should be clear and focused
+> continually refer back to the application definition statement
+> example: "an alarm clock for business travelers" versus "an alarm clock
+  for children"
+> user interface should only contain the options that matter most - what
+  matters right now (user's primary task)
+> showcase the content people about about the most
+> place less frequently used features in a secondary screen or a popover
+> popover should update to only display options that matter in the current
+  context
+
+Touch
+-----
+> provide controls sized for a finger - minimum of 44x44 points for a tap
+  target
+> not all apps are used the same way or by the same people - example of
+  Nike app with a huge pause button in the center of the screen
+> apps targeted to children generally need more space between buttons and
+  larger buttons
+> provide adequate space between controls
+> users expect immediate feedback when touching the screen (give feedback
+  upon pressing)
+> give texture and depth for a tactile look (shine, texture, depth)
+> follow standard iOS conventions (rounded corners and chevrons)
+> design controls to stand out from artwork
+
+Animation
+---------
+> smooth transitions from one view to another (objects don't just appear and
+  disappear in the real world - they shouldn't in an app either)
+> communicate status and process with animation
+> match the user's gesture in the app (animation following actual physics
+  provides better realism)
+> be realistic with animation otherwise the animation can confuse users
+> for example, a "card" animation should only provide 2 sides
+
+Sound
+-----
+> sound can add a heightened set of realism and provide an action with
+  a result
+> sound should not be the only form of feedback
+> reinforce visual concept with sound (for example a shutter sound when
+  taking a picture)
+> sound is a must in games
+
+Language
+--------
+> clear language is important because users are not as familiar with
+  technologies and terminology behind it
+> label buttons by resulting action (close and view buttons when you
+  receive a text message)
+> navigation bars at the top must be clearly labeled
+> avoid placing a logo at the top of every view (takes up too much space)
+> label back buttons by where they go to (labeling "back" doesn't help users
+  because it is obvious that the button already takes them back)
+> make language user-centric instead of based on technology
+> file system is abstracted in iOS (instead of files you see "spreadsheets",
+  "photos", and "songs") - terms should make sense to users
+
+Typography
+----------
+> make the primary text stand out
+> example: person's name who sent you an email in a list of emails
+> subtle shading to distinguish content
+> avoid too many font types and sizes
+
+Graphics
+--------
+> 
