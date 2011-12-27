@@ -55,5 +55,22 @@ Video 3: Mobile Capabilities
 
 Video 4: Mobile Constraints
 ---------------------------
-> 
+> factors to consider: small screen, battery, inconsistent network, fingers,
+  sensors
+> mobile is "intensely personal"
+> 84% of people use their smartphones at home, 80% misc times, 74% waiting in
+  line, 64% at work - just about anywhere, not just stereotypical places
+> "the desktop is like diving, mobile is like snorkling"
+> partial attention when using mobile devices requires a focused design
+> iPad is mostly a bedtime device where users are mostly on in the evening
+> desktop web is usually 1024x768 (minimum), smartphone now is about 320x480,
+  so we've lost 80% of the screen space
+> constraints of mobile help to focus on what people actually use
+> optimizing for speed on mobile, if you're using much of the same code for
+  the desktop, can help user experience on the desktop with the speed increase
+> use CSS3 and canvas tags instead of images when possible to reduce file
+  transfers
 
+Video 5: Aligning with Mobile Behaviors
+---------------------------------------
+> 
