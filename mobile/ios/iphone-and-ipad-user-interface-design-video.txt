@@ -76,7 +76,27 @@ Typography
 > example: person's name who sent you an email in a list of emails
 > subtle shading to distinguish content
 > avoid too many font types and sizes
+> align items for better legibility
+> users should not have to bring the device closer to their face to
+  read text
+> use typefaces that are appropriate to the app's look & feel
 
 Graphics
 --------
-> 
+> add physicality and realism 
+> high-end graphics make an app feel higher quality - especially graphics
+  of expensive items, as long as they are appropriate
+> when you model your app after a real-life object, details especially
+  matter
+> make it engaging - list views may be easy to show, but they often are
+  not engaging enough to users compared to groups of pictures
+> have a beautiful icon because it gives a first impression of an app to
+  a user
+> the icon should relate the concept to the app
+> an icon must be instantly recognizable, with bold colors and clear shapes
+
+Final thoughts
+--------------
+> make the app useful, intuitive, and beautiful
+> read the iOS HIG (Human Interface Guidelines)
+> do not sacrifice quality for anything
