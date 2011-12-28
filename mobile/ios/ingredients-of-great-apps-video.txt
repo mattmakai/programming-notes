@@ -1,0 +1,62 @@
+Ingredients of Great Apps
+Found in Developer on iTunes > iOS Development Resources > Essential Videos
+---------------------------------------------------------------------------
+> 7 ingredients to best apps on the App Store: delightful, innovative,
+  optimized, connected, accessible, localized, designed
+
+Delightful
+----------
+> inviting and provides a great first impression, also intuitive
+  so that users do not need a manual to know how to use the app
+> delightful apps are also engaging, they have a "hook" to get people to come
+  back
+> delightful apps are enabling, they allow people to do things that they
+  could not do before
+> delightful apps are exciting and generate enthusiasm with their attention
+  to detail
+> app should mimic the real world where possible
+> an app should do one thing well and not try to do a lot of things
+> "great apps sweat the details"
+
+Innovative
+----------
+> inspirational - new categories of apps 
+> examples: flight path (new category of gaming), app that identifies mountains
+  based on GPS coordinates (augmented reality)
+> Word Lens - translate from Spanish to English & back
+> Scrabble - manage letters on iPhone and push to iPad
+
+Optimized
+---------
+> high quality - stable, reliable
+> high performance - fast, responsive
+> platform integration - use existing frameworks instead of writing new ones
+  because the existing ones are mature, debugged, and stable
+> platform differentiated - developed specifically for iOS instead of
+  cross-platform
+
+Connected
+---------
+> app works well with other apps - for example, a telephone number clicked on
+  will go to the phone app
+> use the on-board personal information
+> reach beyond the immediate phone (iPhone to iPhone) - for example, give your
+  custom Starbucks order to another iPhone
+
+Accessible
+----------
+> in the US, there are 10 million visually impaired people, 31 million hearing
+  impaired, 12 million with learning disabilities
+> about 1 in 5 useres have a disability
+> use accessibility framework so everyone can use your app
+
+Localized
+---------
+> App Store now in 90 countries
+> use the same binaries with different localization files for language translation
+
+Designed
+--------
+> the iPad becomes the app you're using
+> think of the calendar app, the contact app (address book), maps, there are no
+  traditional distractions that you have when multitasking on a regular computer
