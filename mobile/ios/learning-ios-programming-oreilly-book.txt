@@ -56,4 +56,12 @@ Chapter 3 - Your First iOS App
   and handles critical system messages, such as launching, terminating, etc.
 > every iOS app must contain an application delegate object
 > the UIWindow class defines an object that coordinates the views on the screen
+> Interface Builder files end with the .xib extension, but Cocoa developers refer
+  to them by their old name, nibs
+> IBOutlet and IBAction are place markers to tell XCode that an object in the code
+  can be connected to a UI component in the Interface Builder
+> NSLog is used for debugging, for example: NSLog(@"Print this to console.");
+
+Chapter 4 - Coding in Objective-C
+---------------------------------
 > 
