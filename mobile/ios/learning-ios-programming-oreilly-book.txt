@@ -44,5 +44,16 @@ Chapter 3 - Your First iOS App
   algorithms
 > iOS MVC pattern encourages delegate classes instead of subclasses (implementation
   of class protocols instead)
+> [anObject someMethod] // this is a method call, someMethod message is sent 
+  to anObject object
+> [anObject someMethod: anotherObject]; // another method call, this time
+  someMethod sends anotherObject as a parameter
+> do not use spaces in the Product Name when creating a new project as it confuses
+  earlier versions of Xcode (does this matter anymore?)
+> Symbol Navigator - browse symbols in project and navigate through Classes,
+  Protocols, Functions, Structs, Unions, Enums, Types, and Globals
+> the application delegate receives messages from the main event loop (in main()),
+  and handles critical system messages, such as launching, terminating, etc.
+> every iOS app must contain an application delegate object
+> the UIWindow class defines an object that coordinates the views on the screen
 > 
-
