@@ -64,4 +64,30 @@ Chapter 3 - Your First iOS App
 
 Chapter 4 - Coding in Objective-C
 ---------------------------------
+> a class is specified in two pieces: interface and implementation
+> interface defined in a .h file
+> implementation defined in a .m file
+> Objective-C classes do not have multiple inheritance, only single inheritance
+> most Objective-C classes inherit from the root class NSObject, although NSProxy
+  is also a root class
+> when instance variables are objects (for example, UILabel), always use a
+  pointer type
+> Objective-C supports both strongly and weakly typed declarations
+> strong declaration: UILabel *myLabel;
+> weak declaration: id label;
+> @property is used to avoid declaration (and usually implementation) of access
+  methods for member variables
+> the readonly attribute on a variable tells @synthesize to only generate a
+  getter for the implementation
+> weak attribute - non-owning relationship to the object, when object is
+  deallocated the property is automatically set to nil
+> an example of a weak attribute would be a child object referencing its parent
+  object
+> a strong attribute indicates ownership and the referenced object will not
+  be deallocated until the owner is allocated
+> nonatomic attribute - access method is not meant for multithreaded environments
+  because it is not thread-safe
+> nonatomic is used because it is faster
+> @synthesize label=_label; // values of property do not match instance variable
+> dot syntax is available for synthesized accessors
 > 
