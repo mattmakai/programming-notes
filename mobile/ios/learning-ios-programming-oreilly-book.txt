@@ -89,5 +89,39 @@ Chapter 4 - Coding in Objective-C
   because it is not thread-safe
 > nonatomic is used because it is faster
 > @synthesize label=_label; // values of property do not match instance variable
-> dot syntax is available for synthesized accessors
+> dot syntax is available for synthesized accessors, example: 
+    label.text = @"Hello!"; // instead of [label setText:"Hello!"];
+> a minus sign in front of a method is for instance methods
+> a plus sign in front of a method is for class methods
+> never manually release an automatically memory managed object because it
+  will cause the application to crash
+> there is an autorelease pool in main that defers explicitly releasing objects
+  until a later time, at which the Cocoa framework will handle the autorelease
+> autorelease should not be used in blocks of code where a lot of objects are
+  created, instead manually dealloc those objects as soon as you are done with them
+> ARC removes the need to release, autorelease, and alloc
+> ARC is supported in iOS4 code for ARC-based applications
+> essentially ARC is a precompilation step that adds retain, release, and
+  autorelease statements to the code
+> dealloc should never be called directly, instead release should be used
+> didReceiveMemoryWarning method can be used to release memory when iOS sends
+  your app a warning that too much memory is in use
+> applications that ignore didReceiveMemoryWarning message may crash
+> you can manually simulate the memory warning in the iOS Simulator under
+  Hardware -> Simulate Memory
+> MVC Pattern 
+  - model: manage app state & data, persistent, decoupled from view
+  - view: user representation of the application, what they see, 
+    usually built inside Interface Builder
+  - controller: coordinates model & view, updates based on interaction
+    or other events, contains the application logic
+> model is usually subclass of NSObject
+> Storyboards in iOS 5 allow moderate complexity apps with little code
+> to manually create a view, override viewDidLoad
+
+
+Chapter 5: TableView-Based Applications
+---------------------------------------
+> UITableView and associated classes are very common for iOS device
+  user interface building
 > 
