@@ -1,0 +1,59 @@
+Cocoa Fundamentals Guide
+------------------------
+> the goal of Cocoa is when you become familiar with Cocoa, it will make it easier
+  to build apps for both iOS and Mac OS X
+> Cocoa Fundamentals Guide is the conceptual entry-point for all other Cocoa
+  development guides
+
+What is Cocoa?
+--------------
+> an application environment for both Mac OS X and iOS
+> a suite of object-oriented libraries, a runtime system, and an IDE
+> Cocoa is the only application environment for iOS
+> both a runtime and development aspect
+> Cocoa classes exist for a large number of development tasks
+> iOS has two core frameworks: Foundation and UIKit (Mac OS X has AppKit)
+> application-framework layer of iOS is called Cocoa Touch
+> Cocoa iOS Core OS: kernel, file system, networking, security, power management,
+  and device drivers. Includes sytem-level APIs for many services.
+> Core Services: string manipulation, collection management, networking,
+  preferences, as well as specific hardware features such as GPS or accelerometer
+> Core Services includes both Foundation and Core Foundation frameworks
+> Media: depends on Core Services layer and provides multimedia and graphics
+  capabilities to Cocoa Touch applications (for example, Core Graphics & OpenGL 
+  ES)
+> Cocoa Touch: frameworks that directly support iOS applications, such as
+  Game Kit, Map Kit, and iAd
+> all Cocoa programs are composed of objects that inherit originally from
+  the root class NSObject
+> you cannot create an iOS app without linking and using the classes of
+  UIKit
+> Foundation framework goals:
+  1. Define object behavior & consistent conventions for memory management,
+     object mutability, and notifications
+  2. Support internationalization and localization
+  3. Support object persistence & distribution
+  4. Provide a level of operating system independence to assist portability
+  5. Provide object wrappers for primitives
+> Foundation was designed with the following design patterns:
+  1. Object retention and disposal - provide garbage collection
+  2. Mutable class variants - you can pass mutable instances to methods
+     that take an immutable type because they inherit from them
+  3. Class clusters - abstract class and set of private concrete subclasses
+  4. Notifications - design pattern based on a broadcast mechanism that
+     allows objects (observers) to receive messages but not need to be
+     aware of the existence of the sender (synchronous, async, and distributed
+     message types all exist) - see NSNotification, NSNotificationCenter,
+     NSNotificationQueue, and NSDistributedNotificationCenter classes
+> Value objects encapsulate values of primitive types, including strings,
+  numbers, dates, pointers, and data structures
+> Value objects compare encapsulated values, not pointer values
+> most methods in the Cocoa framework use value objects for return values
+> some object values have both mutable and immutable variants, for example
+  NSMutableData and NSData
+> 
+
+A Bit of History
+----------------
+> Cocoa used to be known as NeXTSTEP, originally released in Sept 1989
+> NeXTSTEP 3.3 was the initial release of Foundation (in 1993)

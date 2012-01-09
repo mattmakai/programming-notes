@@ -1,0 +1,8 @@
+2012
+----
+1.9:  "#pragma mark" is a GCC compiler directive that helps organize code 
+      in Xcode by specifying markers for different sections in files
+      ---
+      Cocoa represents both Mac OS X (Foundation and AppKit) as well as
+      iOS (Foundation and UIKit)
+      ---

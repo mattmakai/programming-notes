@@ -1,0 +1,26 @@
+About Collections
+-----------------
+> a collection is a Foundation framework class for holding & manipulating groups
+  of objects
+> primary role as either array, dictionary, or set
+> most collections only hold objects
+> most collections have mutable and immutable versions
+> collections share: enumeration, checking if an object is a member of
+  a collection, and accessing individual elements
+> mutable versions also include adding and removing objects
+> arrays are best for ordered groups of elements
+> dictionaries are best for unordered groups of elements with duplication;
+  provide key-value pair accessibility
+> sets are best for unordered groups of elements without duplication
+> index sets (NSIndexSet and NSMutableIndexSet) are helper objects that add
+  to standard array capabilities by allowing storage of a subset of an array
+  by storing the indexes into the array rather than creating a new array
+> index paths store the location of information in nested arrays (ease 
+  management of nested arrays) - UITableView uses index paths to store
+  locations within a table view
+> to store pointeres or integers, use NSPointerArray, NSMapTable, or
+  NSHashTable (similar to NSMutableArray, NSMutableDictionary, and
+  NSMutableSet), which allow you to specify how to manage the collection's contents
+> copying and enumerating on collections utilities are provided by the Foundation
+  framework
+
