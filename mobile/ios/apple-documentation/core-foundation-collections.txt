@@ -20,7 +20,8 @@ About Collections
   locations within a table view
 > to store pointeres or integers, use NSPointerArray, NSMapTable, or
   NSHashTable (similar to NSMutableArray, NSMutableDictionary, and
-  NSMutableSet), which allow you to specify how to manage the collection's contents
+  NSMutableSet), which allow you to specify how to manage the collection's 
+  contents
 > copying and enumerating on collections utilities are provided by the Foundation
   framework
 

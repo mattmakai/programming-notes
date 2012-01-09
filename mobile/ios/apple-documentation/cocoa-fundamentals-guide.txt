@@ -51,6 +51,23 @@ What is Cocoa?
 > most methods in the Cocoa framework use value objects for return values
 > some object values have both mutable and immutable variants, for example
   NSMutableData and NSData
+> NSValue - encapsulate a data item such as a floating-point value, pointer,
+  or data structure
+> NSNumber - numeric values such as integers, floats, and doubles
+> NSData - object-oriented storage for byte streams such as image data
+> NSDate - parent class of many date and time specific object types
+> NSString - storage for a sequence of Unicode characters
+> NSFormatter - not value objects but convert instances to and from string
+  representations
+
+UIKit
+-----
+> event-handling and drawing models for iOS and Mac OS X are very different
+> Three ways to add UIKit objects to an application's user interface:
+  1. Use Interface Builder to drag windows, views, and objects from a library
+  2. Create, position, and configure framework objects programmatically
+  3. Implement custom UI objects by subclassing UIView or a class that inherits
+     from UIView
 > 
 
 A Bit of History
