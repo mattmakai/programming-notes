@@ -8,4 +8,5 @@ Cocoa Objects
   3. Dynamic loading - adding new modules to a program at runtime
 > dynamic typing comes from the id data type, which can represent any
   Cocoa object
-> 
+> method invocations are not bound to code during compilation - only
+  bound when the message is actually delivered
