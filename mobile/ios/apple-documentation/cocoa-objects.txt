@@ -1,0 +1,11 @@
+Cocoa Objects
+-------------
+> Objective-C does not allow operator overloading, templates, or multiple
+  inheritance
+> Objective-C dynamism comes from three sources:
+  1. Dynamic typing - class determination at runtime
+  2. Dynamic binding - determining the method to invoke at runtime
+  3. Dynamic loading - adding new modules to a program at runtime
+> dynamic typing comes from the id data type, which can represent any
+  Cocoa object
+> 

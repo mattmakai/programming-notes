@@ -68,7 +68,39 @@ UIKit
   2. Create, position, and configure framework objects programmatically
   3. Implement custom UI objects by subclassing UIView or a class that inherits
      from UIView
-> 
+> UIResponder is the base class for the largest branch of the UIKit
+> UIKit does not use cells like AppKit, instead objects that inherit from
+  UIControl and call its methods to associate an action and target with
+  one or more control events types (when the event occurs, the control
+  sends the action a message)
+> UIKit uses formal protocols with some protocol methods marked optional
+> every application in iOS is managed by a singleton application object,
+  which is the UIApplication object
+> UIApplication controls the main event loop, handles the applications windows
+  and views, and dispatches incoming events to various responder objects
+> UIKit's classes fall into functional groups:
+  1. Controls - subclasses of UIControl, communicate intent to an app
+  2. Modal views - displaying messages on sheets attached to views or in
+                   alert dialog boxes
+  3. Scroll views - UIScrollView parent class, respond to touches for scrolling
+                    within large views (table, text, and web views)
+  4. Toolbars, nav bars, view controllers - UIViewController as base class
+                                            for managing views
+> apps that handle text layout and font management adopt the
+  UITextInput protocol and related classes & protocols to communicate
+  with iOS text input system
+
+Core Data
+---------
+> Core Data - provides infrastructure for managing object graphs, including
+              handling persistent storage
+> persistent store ranges from XML to SQL databases
+> managed objects must be of the type or subclasses of NSManagedObject
+> "managed object context" handles the graph of managed objects
+> the "persistence stack" is a collection of Core Data objects that mediates
+  between objects in an application and external data stores
+> NSDocument is the parent class for NSPersistentDocument, which integrates
+  Core Data and the document architecture
 
 A Bit of History
 ----------------
