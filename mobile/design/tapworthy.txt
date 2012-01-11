@@ -1,0 +1,15 @@
+Tapworthy
+---------
+
+Chapter 1: Touch and Go
+-----------------------
+> most people use mobile apps on the go which means they need large designs
+  and text to see the screen properly
+> distractions are the norm when using apps - not just real world distractions
+  but on-device distractions as well, such as push notifications, text
+  messages, and emails
+> the best apps have a focused job description
+> choose an idea, focus, do the minimum, and polish it many times
+> only a third of downloaded apps get used at all after two months
+> many users do not even discover that apps have a landscape view
+> 

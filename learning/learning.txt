@@ -5,4 +5,7 @@
       ---
       Cocoa represents both Mac OS X (Foundation and AppKit) as well as
       iOS (Foundation and UIKit)
-      ---
+
+1.10: Keyboard shortcut to open a file in Xcode 4 is command-shift-o
+      --
+      

@@ -124,4 +124,12 @@ Chapter 5: TableView-Based Applications
 ---------------------------------------
 > UITableView and associated classes are very common for iOS device
   user interface building
+
+> use the @class forward declaration instead of an import statement when
+  referencing a class directly and not its header
+> the last argument in the object list when initializing an NSMutableArray must
+  be nil otherwise iterating through the array will point to unallocated
+  memory and throw an exception
+> use imageNamed method sparingly because the memory for the images is only
+  released when the application terminates
 > 
