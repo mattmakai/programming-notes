@@ -1,0 +1,53 @@
+Percona Live MySQL DC - Jan. 11, 2012
+Keynote - Peter Zaitsev
+-----------------------
+> proprietary software necessary in some cases and better to have
+  proprietary options than no options at all
+> Oracle new steward of MySQL, made contributions to 5.5 and 5.6
+> good signs the community is being listened to
+> Percona DB drop-in replacement for MySQL, optimized for high end
+> Percona has optimizations for SSDs
+> Maria DB - lead by MySQL founder Monty Widenius
+> Drizzle - 100+ developers from many companies, micro kernel architecture,
+  best used for new development because it is not a drop-in replacement
+> Clustrix, SchoonerSQL are other interesting database MySQL-derived
+  community projects
+> Percona XtraDB Cluster - multi-threaded syncrhonous replication for InnoDB
+
+Tom Daley - Dyn (DNS Services)
+  What's your real tolerance?
+-------------------------------
+> Dyn has used MySQL for core operations since 1998
+> DNS configuration data: guaranteed global transaction durability &
+  replication out to the edges
+> "CAP theorem sucks" - 430 ms of latency worldwide (and that's min
+  theoretical latency)
+> partition tolerance - sometimes data centers go offline for awhile then
+  suddenly come back up again (is the data up to date?)
+> figure out the absolute critical functionality, partition from the optional
+
+Innodb Internals
+  by Peter Zaitsev
+------------------
+> MySQL 5.5 current release
+> MySQL 5.6 development release
+> traditional OLTP engine, which emulates the Oracle architecture
+> all data stored in tablespaces (single or multiple tablespaces)
+> write-ahead logging - changes MUST be stored in the log files before they
+  can be reflected in the tables
+> tablespace format - collection of segments (which are like files)
+> a segment is a number of extents, typically 64 of 16K page sizes
+> smaller extents for very small objects
+> Innodb has "index of organized tables"
+> each index has both leaf node segment and non-leaf node segments
+> special segments for rollback and inserting buffers
+> logs are stored in a "circular" format where oldest ones are erased
+  to make room for new ones
+> only REDO operations are stored in the logs
+> log record format is "physiological" - hybrid of physical and logical
+> separate undo tablespace in MySQL 5.6
+> MySQL normally uses a thread per connection (no more than 1 thread per
+  connection)
+> transactions handled through the threads
+> complex queries can only be executed on a single CPU core at a time!
+> 
