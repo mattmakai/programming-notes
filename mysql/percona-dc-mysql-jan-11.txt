@@ -50,4 +50,29 @@ Innodb Internals
   connection)
 > transactions handled through the threads
 > complex queries can only be executed on a single CPU core at a time!
-> 
+> innodb_thread_concurrency can be used to limit the number of executing
+  threads to reduce contention
+> helper threads in Innodb - main, IO, purge, and deadlock detection
+> purge threads from MySQL 5.5
+> memory allocation - most memory allocated in the buffer pool
+> most reads are done by executing threads, read-ahead is performed
+  by background threads
+> one problem you can encounter with MySQL is that if there are a lot of
+  writes but it cannot flush to disk fast enough, there will be a crash in
+  the number of transactions per second
+> LRU flushes - can happen in workloads with data sets larger than memory
+  when Innodb is unable to find a clean page in 10% of the LRU list
+> Double write buffer - Innodb log requires consistent pages for recovery
+> Innodb tables are "Index Organized"
+> PRIMARY KEY contains data instead of data pointer
+> a hidden PRIMARY KEY is used if not explicitly defined
+
+Monitoring MySQL (at aol)
+-------------------------
+> ORB is AOL's Configuration Management Database (CMDB), cannot stand up 
+  a server without registering with this centralized system
+> ORB is AOL's authoritative source
+> AOL is beginning to use Argus, allows visualization, configuration UI,
+  data collection, and availability
+> Nagios - tool great for fault-detection/alerting, "show me what is currently
+  broken" and service availability metrics
