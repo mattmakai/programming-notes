@@ -76,3 +76,29 @@ Monitoring MySQL (at aol)
   data collection, and availability
 > Nagios - tool great for fault-detection/alerting, "show me what is currently
   broken" and service availability metrics
+> Argus currently tracking ~350 MySQL metrics at AOL
+> tracking number of threads running is a great way to determine if 
+  MySQL performance is degrading
+> be mindful of too much monitoring - eventually people set up filters, so
+  alarms MUST be actionable or people will ignore them
+> Monitoring allows you to move from reactive to proactive when you can
+  inspect and look for trends
+> Monitoring resources:
+  -> http://www.jedi.be/blog/
+  -> http://holmwood.id.au/~lindsay/
+  -> http://palominodb.com/about-us/project
+
+
+Proactive Database Administration
+---------------------------------
+> why does downtime happen?
+> which failures are most common?
+> what could have prevented the incidents?
+> research based on Percona's incidents (154) which could be examined for
+  notes, screen captures, etc.
+> #1 cause of downtime is change - either change that is taken not
+  cautiously (like upgrades) or the changes you need to make but
+  do not (like replace a disk in a RAID array that already has a failure)
+> monitoring helps prevent downtime through proactive analysis of your
+  environment - but only very specific tasks actually help
+> it's important to document proactivity
