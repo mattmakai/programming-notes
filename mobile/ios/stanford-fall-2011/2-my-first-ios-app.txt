@@ -1,0 +1,18 @@
+Video 2: My First iOS App
+-------------------------
+> outlets you almost always make a weak connection because there is already 
+  a strong connection for UI elements to the screen
+> iOS uses the setter for the UILabel to set the pointer to the object
+  displayed on screen, while we use the getter to retrieve the object
+  and change the UILabel's attributes
+> when you copy and paste a button, it copies its target action
+> you can change the id type in a IBAction to be statically typed, such
+  as UIButton *, so at compile time it will catch your errors
+> NSLog is just like printf except it takes an NSString and sends it to
+  the console
+> %@ in an NSString represents an object
+> self.display = [self display] // these are functionally equivalent
+> lazy instantiation - waiting until the last possible part in the code
+  to initiatize a variable
+> synthesize never allocates memory itself
+> 
