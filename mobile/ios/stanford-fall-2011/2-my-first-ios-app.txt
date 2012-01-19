@@ -15,4 +15,3 @@ Video 2: My First iOS App
 > lazy instantiation - waiting until the last possible part in the code
   to initiatize a variable
 > synthesize never allocates memory itself
-> 

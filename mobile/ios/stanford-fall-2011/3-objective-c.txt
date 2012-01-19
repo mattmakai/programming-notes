@@ -1,0 +1,104 @@
+Video 3: Objective-C
+-------------------------
+> use properties for lazy instantiation, consistency checking, UI updating
+> strong/weak are attributes for pointers
+> strong: "keep this in the heap until I don't point to it anymore", in other
+  words don't dealloc the memory unless I set pointer to nil
+> weak: "keep this as long as someone else points to it strongly" - if it gets
+  thrown out of the heap, set my pointer to nil automatically (iOS 5 only)
+> strong/weak is not garbage collection, it's better because reference counting
+  is automatically handling it but it keeps releasing under your control
+> dealloc not as important with ARC because it was primarily used with manual
+  memory management
+> nil means the value of an object pointer is not pointing to anything, all
+  instance variable pointers are set to nil
+> if (obj) { } // executes if obj is not nil
+> instance methods start with a dash (-)
+> class methods start with a (+)
+> class methods are generally creation & utility methods (like static in Java)
+> calling syntax for class methods is [ClassName method:parameter];
+> another calling syntax for class methods is [[instance class] doSomething];
+  where class is literal
+> in class methods, self/super is this class
+> not all objects handed out by other objects are newly created
+> all objects in an array (and collections in general) are strongly pointed to
+> create new object, for example: 
+  NSMutableArray *arr = [[NSMutableArray alloc] init];
+> more complicated initialization methods with arguments are possible, those methods
+  should start with init, for example:
+  UIView *myView = [[UIView alloc] initWithFrame:thePerfectFrame];
+> classes must designate an initializer for subclasses (subclasses will use this
+  one in their initializer) - this is a documentation thing, not syntax-based
+> init methods must return id (not statically typed) for subclassing reasons
+> example of a subclassed init method:
+  @implementation MyObject
+  - (id) init
+  {
+    self = [super init];
+    if (self) {
+      // initialize here
+    }
+    return self;
+  }
+  @end
+> call your own designated initializer method from any other init methods in
+  your class
+> dynamic binding: all objects allocated in the heap, so always use a pointer
+> never use id * because that would be a pointer to a pointer
+> dyanmic binding pushes the decisions for what code to execute to runtime from 
+  compile time (if the class and none of its superclasses implement the method
+  then the program crashes)
+> introspection helps with id to make sure the pointer is pointing to the type
+  of object we actually want to use
+> use isKindOfClass, isMemberOfClass, and respondsToSelect are the methods for
+  introspection for any objects that inherit from NSObject
+> isKindOfClass: returns whether an object is that kind of class (including
+  inheritance)
+> isMemberOfClass: returns whether an object si that kind of class (without
+  inheritance)
+> respondsToSelector: returns whether an object responds to a given method,
+  regards of what its class is
+> example of isKindOfClass:
+  if ([obj isKindOfClass:[NSString class]]) {
+    // do something
+  }
+> method testing takes a selector (SEL), for example:
+  if ([obj respondsToSelector:@selector(methodName)]) {
+    // do something
+> SEL is used for action types and other objects that need SEL to perform an 
+  action
+> (id)copy and (id)mutableCopy methods in NSObject require an object to
+  implement a protocol for it to work (these are shallow copies)
+> NSString: international strings using Unicode
+> NSMutableString: mutable version of NSString, not as commonly used
+> NSNumber: wraps a primitive type, useful for putting primitive types in
+  collections (like NSArray or NSDictionary)
+> NSValue: generic wrapper for other non-object data types, like C structs
+> NSData: "bag of bits" - save/restore/transmit data through iOS SDK
+> NSDate: date and time, with several subclasses
+> NSArray: ordered list of objects, grows and shrinks based on objects in it
+  at instantiation, but it is immutable
+> common NSArray methods: (int)count, (id)objectAtIndex:(int)index
+> NSNull can be put in an NSArray but not nil by itself
+> NSMutableArray's method (id)arrayWithCapacity:(init)initialSpace; // performance
+  hint only
+> copy on NSMutableArray returns an NSArray
+> NSMutableArray inherits all of NSArray's methods
+> NSDictionary: hashtable, key/value pairs
+> NSSet: immutable, unordered collection of distinct objects
+> NSCountedSet: can contain multiple equal objects at the same time and counts
+  the number added to the set of same objects
+> NSOrderedSet: immutable ordered collection of distinct objects (not a subclass
+  of NSSet)
+> enumeration, for example:
+  for (NSString *string in myArray) {
+    double value = [string doubleValue]; // crash here if string is not an NSString
+  }
+> enumeration over dictionaries:
+  for (id key in myDictionary) {
+    // something with key and/or value here
+  }
+> "property list" is a collection of collections
+> iOS SDK has a number of methods to operate on property lists
+> NSUserDefaults: lightweight storage of property lists (NSDictionary that 
+  persists between launches of the application)
