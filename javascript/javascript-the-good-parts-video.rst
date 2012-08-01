@@ -34,4 +34,6 @@ Douglas Crockford
 * In prototypal inheritance, objects inherit from other objects, there are
   no classes
 * Crockford no longer uses new - considered too dangerous
-* 
+* 4 ways to create an object, 1. object literal, 2. new, 3. Object.create,
+  4. call another power constructor
+* * 
