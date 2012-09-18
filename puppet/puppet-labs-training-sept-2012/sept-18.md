@@ -1,7 +1,7 @@
 Puppet Labs - Puppet Fundamental Training
 =========================================
 
-September 18, 2012 - taught by Zack Smith
+September 18, 2012 - taught by Zack Smith (zack@puppetlabs.com)
 
 Introduction
 ------------
@@ -68,4 +68,6 @@ Modules and Classes
 * there is a difference between defining and declaring
 * *define* - specify contents and behavior
 * *declare* - direct Puppet to include or instantiate a class
-* 
+* you can use "puppet apply" locally and not use a Puppet master if desired
+* "puppet apply --noop" simulates what would actually happen without enforcing
+  a change
