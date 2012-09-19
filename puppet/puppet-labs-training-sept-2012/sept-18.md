@@ -5,7 +5,7 @@ September 18, 2012 - taught by Zack Smith (zack@puppetlabs.com)
 
 Introduction
 ------------
-* Puppet advantage in level of detailed simulation
+* Puppet advantage in level of detailed simulation versus other solutions
 * Facts - pieces of inventoried data (custom pieces of information) that the
   client sends to the Puppet Master (facts are inventory information)
 * conditional logic happens on the puppet master, not the puppet agents
