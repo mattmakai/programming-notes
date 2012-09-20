@@ -79,5 +79,28 @@ Dependency Management
 * Implicit dependencies: files and directories (directory must exist before
   the file), also between file ownership and user resources (create user
   before file which is owned by that user)
-* 
+
+Language & Templates
+--------------------
+* variables are prefixed with '$'
+* variables can be used as resource titles and attribute values
+* in strings, variables should be bracketed with curly braces for clarity
+* facter is used to extend Puppet, but facter is a separate program
+* lib directory under a module will sync out to all agents
+* custom facts are written in Ruby
+* currently there are no arrays or hashmaps for facts (but you can use a
+  comma-delimited list for numbers)
+* you can also write facts to facts.d which is a text file with key/value
+  pairs and will be read by facter
+* facts are global variables, use :: in front of the variable name, for
+  example, $::hostname
+* Puppet is a single-pass compiler so you cannot reassign variables
+  (technically variables are constants)
+* ${module_name} is a free variable set by Puppet for templates
+
+Defined Resource Types
+----------------------
+* defined resource types are custom defined resources
+* does not require Ruby code
+* the point of defined resource types is to create reusable configurations
 
