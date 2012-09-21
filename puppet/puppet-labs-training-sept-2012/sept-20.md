@@ -43,4 +43,43 @@ Language Constructs
 * selector statements are NOT case sensitive
 * in-statement and out-statement (put conditional logic in params.pp) selector,
   then include params.pp and scope the variable with $params::var 
-* 
+* case statements are generally better because with many branches it is just
+  cleaner
+* undef - undefined variable
+
+Functions and Nodes
+-------------------
+* Functions are pieces of Ruby code that get executed on the master (or
+  locally with "puppet apply")
+* the results of the functions are included in the Catalog
+* two types of functions: statements, rvalues
+* "include" is a function of the statement type
+* "template" is an rvalue function
+* "notice" function runs on the master and you can debug on the master before the 
+  Catalog is compiled
+* "notify" runs on the client
+* external node classifiers are highly recommended
+* virtual resources - when two modules want to install the same package of 
+  the same package
+* use virtual resources with the @ symbol in front of function names and
+  the "realize" command on other functions or commands
+* if you want to realize a bunch of things at a time, then use the
+  "<| tag == [whatever] |>" to realize everything with that tag at a time
+
+Advanced Classes
+----------------
+* classes can inherit from other classes
+* parameterized classes: when you want to modify a class behavior on different 
+  nodes
+* content & source are mutually exclusive
+* so if you want to undo a source variable declared in the parent class,
+  do "source => undef" then define the content
+
+Misc
+----
+* "puppet module generate [module name]" - generates module structure
+* "puppet module install [module name]" - install a module from the forge,
+  where [module name] is the FORGE name, but not the actual module name,
+  ex: makai-apache, will install as apache
+* modules can have dependencies - but better to not go overboard
+
